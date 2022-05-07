@@ -1,18 +1,18 @@
 function listDrive() {
 
     // **************************************************
-    // ‘I‘ğ‚µ‚½ƒV[ƒg‚ğ‘ÎÛ‚Æ‚µ‚Ü‚·
+    // é¸æŠã—ãŸã‚·ãƒ¼ãƒˆã‚’å¯¾è±¡ã¨ã—ã¾ã™
     // **************************************************
     var spreadsheet = SpreadsheetApp.getActive();
 
     // **************************************************
-    // —ñƒNƒŠƒA
+    // åˆ—ã‚¯ãƒªã‚¢
     // **************************************************
     spreadsheet.getRange('A:E').activate();
     spreadsheet.getActiveRangeList().clear({contentsOnly: true, commentsOnly: true, skipFilteredRows: true});
 
     // **************************************************
-    // ƒhƒ‰ƒCƒuˆê—— (100Œ‚Ü‚Å:‚»‚êˆÈã‚Í nextPageToken ‚ğg‚¤)
+    // ãƒ‰ãƒ©ã‚¤ãƒ–ä¸€è¦§ (100ä»¶ã¾ã§:ãã‚Œä»¥ä¸Šã¯ nextPageToken ã‚’ä½¿ã†)
     // Drive API v2
     // **************************************************
     var response = Drive.Drives.list({"maxResults":100});
@@ -29,7 +29,7 @@ function listDrive() {
     }
 
     // **************************************************
-    // ƒ}ƒCƒhƒ‰ƒCƒuƒ‹[ƒg“à‚ÌƒtƒHƒ‹ƒ_‚Ìˆê—— (Drive API ‚Í•K—v‚È‚¢)
+    // ãƒã‚¤ãƒ‰ãƒ©ã‚¤ãƒ–ãƒ«ãƒ¼ãƒˆå†…ã®ãƒ•ã‚©ãƒ«ãƒ€ã®ä¸€è¦§ (Drive API ã¯å¿…è¦ãªã„)
     // **************************************************
     var folders = DriveApp.getRootFolder().getFolders();
     var a = new Array();
